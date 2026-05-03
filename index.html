@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Puptown Mobile Grooming — Tampa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#0d1f0d;--accent:#86efac;--surface:#142814;--text:#f0fdf4;--gray:rgba(255,255,255,.55)}
+body{font-family:'Inter',sans-serif;color:var(--text);background:var(--bg)}
+a{text-decoration:none;color:inherit}
+/* Nav */
+nav{position:sticky;top:0;z-index:999;background:var(--bg);border-bottom:1px solid rgba(255,255,255,.07);padding:14px 24px;display:flex;justify-content:space-between;align-items:center}
+.nav-logo{font-family:'Poppins',sans-serif;font-size:17px;font-weight:700;color:var(--accent)}
+.nav-btns{display:flex;gap:10px}
+.btn-book{background:var(--accent);color:var(--bg);padding:9px 20px;border-radius:8px;font-weight:700;font-size:13px}
+.btn-call{border:1.5px solid var(--accent);color:var(--accent);padding:8px 18px;border-radius:8px;font-weight:600;font-size:13px}
+/* Hero */
+.hero{min-height:88vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:80px 24px;background:linear-gradient(160deg,var(--bg) 0%,var(--surface) 50%,var(--bg) 100%)}
+.hero-inner{max-width:820px}
+.rpill{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);padding:7px 18px;border-radius:30px;margin-bottom:28px;font-size:13px;color:var(--accent);font-weight:600}
+.hero h1{font-family:'Poppins',sans-serif;font-size:54px;font-weight:800;line-height:1.1;margin-bottom:22px;color:var(--text)}
+.hero p{font-size:19px;color:var(--gray);margin-bottom:42px;line-height:1.65;max-width:640px;margin-left:auto;margin-right:auto}
+.hbtns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.hbtn-p{background:var(--accent);color:var(--bg);padding:16px 38px;border-radius:12px;font-family:'Poppins',sans-serif;font-weight:700;font-size:16px}
+.hbtn-s{border:2px solid var(--accent);color:var(--accent);padding:14px 34px;border-radius:12px;font-family:'Poppins',sans-serif;font-weight:700;font-size:16px}
+/* Trust bar */
+.tbar{background:var(--surface);padding:22px 24px;border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06)}
+.tinner{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:16px;text-align:center}
+.titem{color:var(--text)}.ticon{font-size:24px;margin-bottom:6px}.titem p{font-size:12px;color:var(--gray);font-weight:600}
+/* Services */
+.sec{padding:80px 24px;max-width:1000px;margin:0 auto}
+.stag{font-size:11px;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:.14em;margin-bottom:8px}
+.stitle{font-family:'Poppins',sans-serif;font-size:34px;font-weight:700;margin-bottom:40px;color:var(--text)}
+.sgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.scard{background:var(--surface);border-radius:14px;padding:28px;border:1px solid rgba(255,255,255,.07);transition:transform .2s,box-shadow .2s}
+.scard:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,.3)}
+.sicon{font-size:34px;margin-bottom:14px}
+.scard h3{font-family:'Poppins',sans-serif;font-size:16px;font-weight:700;margin-bottom:8px;color:var(--text)}
+.scard p{font-size:13px;color:var(--gray);line-height:1.65;margin-bottom:18px}
+.sbtn{display:inline-block;background:var(--accent);color:var(--bg);padding:8px 18px;border-radius:8px;font-size:12px;font-weight:700}
+/* Steps */
+.steps-wrap{background:var(--surface);padding:80px 24px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;text-align:center;max-width:900px;margin:0 auto}
+.step{padding:20px}
+.stepnum{width:54px;height:54px;background:var(--accent);color:var(--bg);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-size:22px;font-weight:800;margin:0 auto 16px}
+.step h3{font-family:'Poppins',sans-serif;font-size:17px;font-weight:700;margin-bottom:8px;color:var(--text)}
+.step p{font-size:13px;color:var(--gray);line-height:1.65}
+/* Booking */
+.bsec{background:var(--surface);padding:80px 24px}
+.binner{max-width:680px;margin:0 auto;text-align:center}
+.binner .stitle{margin-bottom:10px}
+.bsub{font-size:15px;color:var(--gray);margin-bottom:38px}
+.bform{background:var(--bg);border-radius:16px;padding:40px;border:1px solid rgba(255,255,255,.08);text-align:left}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}
+.fg{display:flex;flex-direction:column;gap:6px;margin-bottom:16px}
+label{font-size:12px;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:.06em}
+input,select,textarea{padding:12px 16px;background:var(--surface);border:1px solid rgba(255,255,255,.1);border-radius:8px;font-size:14px;font-family:'Inter',sans-serif;color:var(--text);outline:none;width:100%;transition:border-color .2s}
+input:focus,select:focus,textarea:focus{border-color:var(--accent)}
+select option{background:var(--bg)}
+.subtn{width:100%;background:var(--accent);color:var(--bg);border:none;padding:16px;border-radius:10px;font-family:'Poppins',sans-serif;font-size:16px;font-weight:700;cursor:pointer;margin-top:8px}
+.cmsg{margin-top:14px;font-size:13px;color:var(--gray);text-align:center}
+/* Contact */
+.csec{background:var(--bg);color:var(--text);padding:80px 24px;text-align:center;border-top:1px solid rgba(255,255,255,.06)}
+.bigph{font-family:'Poppins',sans-serif;font-size:46px;font-weight:800;color:var(--accent);display:block;margin:18px 0 8px}
+/* Areas */
+.asec{background:var(--surface);padding:48px 24px;text-align:center;border-top:1px solid rgba(255,255,255,.06)}
+/* Footer */
+footer{background:#050506;color:rgba(255,255,255,.3);text-align:center;padding:24px;font-size:12px}
+footer a{color:var(--accent)}
+/* Mobile sticky call */
+.fcall{display:none;position:fixed;bottom:0;left:0;right:0;background:var(--accent);color:var(--bg);text-align:center;padding:18px;font-family:'Poppins',sans-serif;font-weight:700;font-size:16px;z-index:9999}
+@media(max-width:768px){
+  .hero h1{font-size:32px}
+  .sgrid{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr}
+  .tinner{grid-template-columns:repeat(2,1fr)}
+  .frow{grid-template-columns:1fr}
+  .fcall{display:block}
+  body{padding-bottom:65px}
+  .nav-btns .btn-book{display:none}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">Puptown Mobile Grooming</div>
+  <div class="nav-btns">
+    <a href="#booking" class="btn-book">Book Now</a>
+    <a href="tel:8138984707" class="btn-call">📞 (813) 898-4707</a>
+  </div>
+</nav>
+
+<div class="hero" id="hero">
+  <div class="hero-inner">
+    <div class="rpill">⭐ 5/5 &middot; 92 Google Reviews &middot; Tampa</div>
+    <h1><span style="color:#86efac">Mobile Grooming</span><br>That Comes to You</h1>
+    <p>We groom your pet at your door in Tampa. No crates, no stress, no waiting.</p>
+    <div class="hbtns">
+      <a href="#booking" class="hbtn-p">📅 Book Appointment</a>
+      <a href="tel:8138984707" class="hbtn-s">📞 Call (813) 898-4707</a>
+    </div>
+  </div>
+</div>
+
+<div class="tbar">
+  <div class="tinner"><div class="titem"><div class="ticon">🎓</div><p>Certified Groomer</p></div><div class="titem"><div class="ticon">🚐</div><p>Mobile — We Come to You</p></div><div class="titem"><div class="ticon">🐾</div><p>No Crates, No Stress</p></div><div class="titem"><div class="ticon">📍</div><p>Serving Tampa</p></div></div>
+</div>
+
+<div class="sec" id="services">
+  <div class="stag">What We Do</div>
+  <div class="stitle">Services</div>
+  <div class="sgrid">
+    <div class="scard">
+      <div class="sicon">🛁</div>
+      <h3>Mobile dog grooming</h3>
+      <p>Thorough bath, blow-dry, and full brush in our mobile unit — right at your door in Tampa.</p>
+      <a href="#booking" class="sbtn">Book This</a>
+    </div>
+    <div class="scard">
+      <div class="sicon">✂️</div>
+      <h3>Nail trimming</h3>
+      <p>Breed-specific cuts and styling from a certified groomer who knows your dog's coat.</p>
+      <a href="#booking" class="sbtn">Book This</a>
+    </div>
+    <div class="scard">
+      <div class="sicon">💅</div>
+      <h3>Bath and brush</h3>
+      <p>Stress-free nail trimming at home — no salon trip, no crate anxiety for your pet.</p>
+      <a href="#booking" class="sbtn">Book This</a>
+    </div>
+    <div class="scard">
+      <div class="sicon">🐾</div>
+      <h3>De-shedding treatment</h3>
+      <p>Professional de-shedding shampoo and tools to reduce shedding by up to 80%.</p>
+      <a href="#booking" class="sbtn">Book This</a>
+    </div>
+    <div class="scard">
+      <div class="sicon">🐶</div>
+      <h3>Teeth brushing</h3>
+      <p>Gentle, patient first grooming experience that sets your puppy up for a lifetime of easy care.</p>
+      <a href="#booking" class="sbtn">Book This</a>
+    </div>
+    <div class="scard">
+      <div class="sicon">👴</div>
+      <h3>Flea treatment</h3>
+      <p>Extra-gentle handling and specialized care for older pets who need it most.</p>
+      <a href="#booking" class="sbtn">Book This</a>
+    </div>
+  </div>
+</div>
+
+<div class="steps-wrap">
+  <div style="max-width:1000px;margin:0 auto">
+    <div style="text-align:center;margin-bottom:40px">
+      <div class="stag">The Process</div>
+      <div class="stitle" style="margin-bottom:0">How It Works</div>
+    </div>
+    <div class="steps">
+    <div class="step">
+      <div class="stepnum">1</div>
+      <h3>Book Your Appointment</h3>
+      <p>Pick a time that works for you. We come to your Tampa home or driveway.</p>
+    </div>
+    <div class="step">
+      <div class="stepnum">2</div>
+      <h3>We Arrive at Your Door</h3>
+      <p>Our groomer pulls up in a fully-equipped mobile unit. Your pet stays calm and close to home.</p>
+    </div>
+    <div class="step">
+      <div class="stepnum">3</div>
+      <h3>Happy Pet, Done Right</h3>
+      <p>Breed-specific groom with professional products. You see the results when we're done.</p>
+    </div>
+    </div>
+  </div>
+</div>
+
+
+  <div style="background:#0d1f0d;padding:80px 24px" id="reviews">
+    <div style="max-width:1000px;margin:0 auto">
+      <div style="font-size:12px;font-weight:700;color:#86efac;text-transform:uppercase;letter-spacing:.12em;margin-bottom:8px">What Customers Say</div>
+      <div style="font-family:'Poppins',sans-serif;font-size:32px;font-weight:700;color:#f0fdf4;margin-bottom:8px">Google Reviews</div>
+      <p style="font-size:14px;opacity:.5;margin-bottom:36px">5 stars &middot; 92 Google reviews &middot; <a href="https://www.google.com/search?q=Puptown Mobile Grooming" target="_blank" style="color:#86efac">See all reviews on Google ↗</a></p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;color:#f0fdf4">
+      <div style="background:#142814;border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:24px">
+        <div style="font-size:18px;margin-bottom:10px"><span style="color:#86efac">★★★★★</span></div>
+        <p style="font-size:14px;line-height:1.7;margin-bottom:14px;opacity:.85">"Shaun was amazing with our Sammie! He is knowledgeable and compassionate at his craft!! Sammie was comfortable and enjoyed his grooming time! We highly recommend Puptown Mobile Grooming for all your furbabies grooming ne..."</p>
+        <div style="font-size:12px;opacity:.5;font-weight:600">— Via Google Reviews</div>
+      </div>
+      <div style="background:#142814;border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:24px">
+        <div style="font-size:18px;margin-bottom:10px"><span style="color:#86efac">★★★★★</span></div>
+        <p style="font-size:14px;line-height:1.7;margin-bottom:14px;opacity:.85">"Our pets are very precious and we want to give the best care possible as it is healthy and comfortable for your pet. We highly recommend Suzi's Puptown grooming service. They are professional, friendly and Emma just love..."</p>
+        <div style="font-size:12px;opacity:.5;font-weight:600">— Via Google Reviews</div>
+      </div>
+      <div style="background:#142814;border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:24px">
+        <div style="font-size:18px;margin-bottom:10px"><span style="color:#86efac">★★★★★</span></div>
+        <p style="font-size:14px;line-height:1.7;margin-bottom:14px;opacity:.85">"Absolutely obsessed with how this appointment went. Calvin (my doggo) was so comfortable he actually was able to get his nails trimmed professionally. Can't get over how fluffy he is. Looks like a puppy again and smells ..."</p>
+        <div style="font-size:12px;opacity:.5;font-weight:600">— Via Google Reviews</div>
+      </div>
+      </div>
+    </div>
+  </div>
+
+<div class="bsec" id="booking">
+  <div class="binner">
+    <div class="stag">Get Started</div>
+    <div class="stitle">Book Your Appointment</div>
+    <p class="bsub">Fill out the form and we will confirm within 2 hours. Or call us at (813) 898-4707.</p>
+    <div class="bform">
+      <div class="frow">
+        <div class="fg"><label>Your Name</label><input type="text" id="fn" placeholder="John Smith" required></div>
+        <div class="fg"><label>Your Phone</label><input type="tel" id="fp" placeholder="(555) 000-0000" required></div>
+      </div>
+      <div class="fg"><label>Your Email</label><input type="email" id="fe" placeholder="you@email.com"></div>
+      <div class="fg"><label>Service Needed</label>
+        <select id="fs"><option value="">Select a service…</option><option>Mobile dog grooming</option><option>Nail trimming</option><option>Bath and brush</option><option>De-shedding treatment</option><option>Teeth brushing</option><option>Flea treatment</option><option>Not sure — need to discuss</option></select>
+      </div>
+      <div class="frow">
+        <div class="fg"><label>Preferred Date</label><input type="date" id="fd"></div>
+        <div class="fg"><label>Preferred Time</label><input type="time" id="ft"></div>
+      </div>
+      <div class="fg"><label>Notes</label><textarea id="fn2" rows="3" placeholder="Location, vehicle details, or anything else we should know…"></textarea></div>
+      <button class="subtn" onclick="submitForm()">Request Appointment →</button>
+      <p class="cmsg">✅ We confirm all appointments within 2 hours · No payment required to book</p>
+    </div>
+  </div>
+</div>
+
+<div class="csec" id="contact">
+  <div class="stag" style="color:var(--accent)">Reach Us</div>
+  <div class="stitle">Call or Text Anytime</div>
+  <a href="tel:8138984707" class="bigph">(813) 898-4707</a>
+  
+  <p style="opacity:.5;margin-top:14px">Serving Tampa &middot; St. Petersburg &middot; Clearwater &middot; Brandon &middot; Wesley Chapel and surrounding areas</p>
+</div>
+
+<div class="asec">
+  <p style="font-size:13px;color:var(--gray)">📍 Service Area: Tampa &middot; St. Petersburg &middot; Clearwater &middot; Brandon &middot; Wesley Chapel</p>
+</div>
+
+<footer>
+  © 2026 Puptown Mobile Grooming · Tampa · <a href="tel:8138984707">(813) 898-4707</a><br>
+  <span style="font-size:11px;opacity:.5">Sample website preview prepared for Puptown Mobile Grooming by GDI Web Solutions · puptowntampamobilegrooming.com</span>
+</footer>
+
+<a href="tel:8138984707" class="fcall">📞 Call Now — (813) 898-4707</a>
+
+<script>
+function submitForm(){
+  var nm=document.getElementById('fn').value;
+  var ph=document.getElementById('fp').value;
+  var em=document.getElementById('fe').value;
+  var svc=document.getElementById('fs').value;
+  var dt=document.getElementById('fd').value;
+  var tm=document.getElementById('ft').value;
+  var nt=document.getElementById('fn2').value;
+  if(!nm||!ph||!svc){alert('Please fill in your name, phone, and service needed.');return;}
+  var body='New Booking%0AName: '+encodeURIComponent(nm)+'%0APhone: '+encodeURIComponent(ph)+'%0AEmail: '+encodeURIComponent(em)+'%0AService: '+encodeURIComponent(svc)+'%0ADate: '+encodeURIComponent(dt)+'%0ATime: '+encodeURIComponent(tm)+'%0ANotes: '+encodeURIComponent(nt);
+  window.location.href='tel:8138984707';
+  document.querySelector('.bform').innerHTML='<div style="text-align:center;padding:40px"><div style="font-size:48px;margin-bottom:16px">✅</div><h3 style="font-family:Poppins,sans-serif;font-size:22px;margin-bottom:10px;color:var(--text)">Request Sent!</h3><p style="color:var(--gray)">We will confirm within 2 hours.<br>Questions? Call (813) 898-4707</p></div>';
+}
+</script>
+</body>
+</html>
